@@ -71,5 +71,6 @@ After the calculation is complete then use make_grid_file.py to make the data fi
 in interpolation.                 
 
 _Optional:_
-	- kill_xterms.py : script to kill all x-terms created once calculation is complete (this needs to be adjusted to the OS used)
-	- clean_grid.py: deletes all files in ./kin_grid and ./calc_grid_all, I recommend doing this to avoid confusion with the kin_grid files.
+
+- **kill_xterms.py** : script to kill all x-terms created once calculation is complete (this needs to be adjusted to the OS used)
+- **clean_grid.py**  : deletes all files in ./kin_grid and ./calc_grid_all, I recommend doing this to avoid confusion with the kin_grid files.
