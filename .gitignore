@@ -5,11 +5,12 @@
 *.log
 
 # directories which are created by scripts
-/kin_grid
-/calc_grid_all
+kin_grid
+calc_grid_all
+results
 
 # fortran compilation files
-/edepngo4_v1/*.o
+edepngo4_v1/*.o
 
 # other
 .DS_Store
