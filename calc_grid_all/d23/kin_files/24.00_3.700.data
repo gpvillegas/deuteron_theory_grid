@@ -1,0 +1,128 @@
+
+# ----------------------------------------------------------------------
+# control parameters for edpngo4_v1 calculation
+
+# name of kinematics (no blanks)
+
+# ----------------------------------------------------------------------
+#\kinematics = ThQ_24.00_3.700
+# ----------------------------------------------------------------------
+
+# optional comments inserted into kinematics file for code (not important)
+
+# \ comment1 = 2.0 < Q2 < 8.0
+
+# \ comment2 = 0.0 < pr < 1.5
+
+# ----------------------------------------------------------------------
+# calculation control
+# ---------------------------------------------------------------------- 
+
+
+#   ktf: the knock-out nucleon is proton(1), neutron(-1)
+#\   ktf  = 1  
+
+#  noff: Off-Shell effects included (1) not included (0)
+#\   noff = 1  
+
+#  npv: only pole term in FSI (0), pole+PV (1)
+#\   npv  = 1
+
+#  npro: it calculates d\sigma/dE'_e d\Omega_e d\Omega_pf
+#\   npro = 1  
+
+#  icon: icon = 0 initialization, 1 - PWIA, 2 -forward rescattering, 3 - charge exchange rescattering
+#         12 - PWIA+FSI, 13 - PWIA+CHEX, 123 - PWIA+FSI+CHEX
+#\   icon = 12
+
+
+#  iv2:  - version of parameterization of CHEX amplitude -
+#         10 - Gibbs-Loiseau (has only real part), 21 - SAID, 1021 - SAID+GL
+#         10021 - SAID+GL (with Im part at p>p0 modelled using SAID's value
+#         -21 SAID   - For details look at fpn_chex.f          
+#\   iv2 = 10  
+
+
+#  iv1:  - version of FSI; 1- diagonal FSI using fpn.f, 2- diagonal FSI using f_NN_sd.f
+#         which uses SAID parameterization for plab<3.68, 3 - nondiagonal approximation
+#         using f_NN_sd.f. At p>1.4 it uses diffractive parametrization like fpn.f
+#\  iv1= 3    
+
+#  isd:   - isd = 1 spectator mechanism, isd=2 direct mechanism isd =0 both
+#\  isd = 1   
+
+#  iw:    - 1 - Paris 2 - V18 deuteron wave funcion, 3- cd Bonn, 4 - AV18sb
+#\  iw = 3    
+
+#  ipp:   - 1 - quasi "pp" wave functio - only S-parital wave, 0, both S and D waves
+#\  ipp = 0   
+
+#  ics:  - 1 - SLAC, 2 Kelly, 3 - Bodek, BB Arrington for-factor paremeterizations
+#\   ics = 1
+
+#         crs  - cross section in nb/GeV/str^2
+
+#----------------------------------------------------------------------
+# kinematic settings
+#----------------------------------------------------------------------
+
+# theta_r: angle between recoil and q (degrees)
+# phi_r: angle of the recoil plane and the electron scattering plane (degrees) 
+# p_miss: missing momentum (GeV/c)
+# Q2:  - 4-momemtum transfer squared (GeV/c)**2
+# E_I: incident energy (GeV)
+# ID: kinematics identification string (no blanks) 
+
+
+#! theta_r[f,0]/ phi_r[f,1]/ p_miss[f,2]/ Q2[f,3]/ E_i[f,4]/  ID[s,5]/
+24.0 0.0 0.0 3.7 10.542  k_8_17_0
+24.0 0.0 0.03 3.7 10.542  k_8_17_1
+24.0 0.0 0.06 3.7 10.542  k_8_17_2
+24.0 0.0 0.09 3.7 10.542  k_8_17_3
+24.0 0.0 0.12 3.7 10.542  k_8_17_4
+24.0 0.0 0.15 3.7 10.542  k_8_17_5
+24.0 0.0 0.18 3.7 10.542  k_8_17_6
+24.0 0.0 0.21 3.7 10.542  k_8_17_7
+24.0 0.0 0.24 3.7 10.542  k_8_17_8
+24.0 0.0 0.27 3.7 10.542  k_8_17_9
+24.0 0.0 0.3 3.7 10.542  k_8_17_10
+24.0 0.0 0.32999999999999996 3.7 10.542  k_8_17_11
+24.0 0.0 0.36 3.7 10.542  k_8_17_12
+24.0 0.0 0.39 3.7 10.542  k_8_17_13
+24.0 0.0 0.42 3.7 10.542  k_8_17_14
+24.0 0.0 0.44999999999999996 3.7 10.542  k_8_17_15
+24.0 0.0 0.48 3.7 10.542  k_8_17_16
+24.0 0.0 0.51 3.7 10.542  k_8_17_17
+24.0 0.0 0.54 3.7 10.542  k_8_17_18
+24.0 0.0 0.57 3.7 10.542  k_8_17_19
+24.0 0.0 0.6 3.7 10.542  k_8_17_20
+24.0 0.0 0.63 3.7 10.542  k_8_17_21
+24.0 0.0 0.6599999999999999 3.7 10.542  k_8_17_22
+24.0 0.0 0.69 3.7 10.542  k_8_17_23
+24.0 0.0 0.72 3.7 10.542  k_8_17_24
+24.0 0.0 0.75 3.7 10.542  k_8_17_25
+24.0 0.0 0.78 3.7 10.542  k_8_17_26
+24.0 0.0 0.8099999999999999 3.7 10.542  k_8_17_27
+24.0 0.0 0.84 3.7 10.542  k_8_17_28
+24.0 0.0 0.87 3.7 10.542  k_8_17_29
+24.0 0.0 0.8999999999999999 3.7 10.542  k_8_17_30
+24.0 0.0 0.9299999999999999 3.7 10.542  k_8_17_31
+24.0 0.0 0.96 3.7 10.542  k_8_17_32
+24.0 0.0 0.99 3.7 10.542  k_8_17_33
+24.0 0.0 1.02 3.7 10.542  k_8_17_34
+24.0 0.0 1.05 3.7 10.542  k_8_17_35
+24.0 0.0 1.08 3.7 10.542  k_8_17_36
+24.0 0.0 1.1099999999999999 3.7 10.542  k_8_17_37
+24.0 0.0 1.14 3.7 10.542  k_8_17_38
+24.0 0.0 1.17 3.7 10.542  k_8_17_39
+24.0 0.0 1.2 3.7 10.542  k_8_17_40
+24.0 0.0 1.23 3.7 10.542  k_8_17_41
+24.0 0.0 1.26 3.7 10.542  k_8_17_42
+24.0 0.0 1.29 3.7 10.542  k_8_17_43
+24.0 0.0 1.3199999999999998 3.7 10.542  k_8_17_44
+24.0 0.0 1.3499999999999999 3.7 10.542  k_8_17_45
+24.0 0.0 1.38 3.7 10.542  k_8_17_46
+24.0 0.0 1.41 3.7 10.542  k_8_17_47
+24.0 0.0 1.44 3.7 10.542  k_8_17_48
+24.0 0.0 1.47 3.7 10.542  k_8_17_49
+24.0 0.0 1.5 3.7 10.542  k_8_17_50

@@ -1,0 +1,128 @@
+
+# ----------------------------------------------------------------------
+# control parameters for edpngo4_v1 calculation
+
+# name of kinematics (no blanks)
+
+# ----------------------------------------------------------------------
+#\kinematics = ThQ_99.00_4.200
+# ----------------------------------------------------------------------
+
+# optional comments inserted into kinematics file for code (not important)
+
+# \ comment1 = 2.0 < Q2 < 8.0
+
+# \ comment2 = 0.0 < pr < 1.5
+
+# ----------------------------------------------------------------------
+# calculation control
+# ---------------------------------------------------------------------- 
+
+
+#   ktf: the knock-out nucleon is proton(1), neutron(-1)
+#\   ktf  = 1  
+
+#  noff: Off-Shell effects included (1) not included (0)
+#\   noff = 1  
+
+#  npv: only pole term in FSI (0), pole+PV (1)
+#\   npv  = 1
+
+#  npro: it calculates d\sigma/dE'_e d\Omega_e d\Omega_pf
+#\   npro = 1  
+
+#  icon: icon = 0 initialization, 1 - PWIA, 2 -forward rescattering, 3 - charge exchange rescattering
+#         12 - PWIA+FSI, 13 - PWIA+CHEX, 123 - PWIA+FSI+CHEX
+#\   icon = 12
+
+
+#  iv2:  - version of parameterization of CHEX amplitude -
+#         10 - Gibbs-Loiseau (has only real part), 21 - SAID, 1021 - SAID+GL
+#         10021 - SAID+GL (with Im part at p>p0 modelled using SAID's value
+#         -21 SAID   - For details look at fpn_chex.f          
+#\   iv2 = 10  
+
+
+#  iv1:  - version of FSI; 1- diagonal FSI using fpn.f, 2- diagonal FSI using f_NN_sd.f
+#         which uses SAID parameterization for plab<3.68, 3 - nondiagonal approximation
+#         using f_NN_sd.f. At p>1.4 it uses diffractive parametrization like fpn.f
+#\  iv1= 3    
+
+#  isd:   - isd = 1 spectator mechanism, isd=2 direct mechanism isd =0 both
+#\  isd = 1   
+
+#  iw:    - 1 - Paris 2 - V18 deuteron wave funcion, 3- cd Bonn, 4 - AV18sb
+#\  iw = 3    
+
+#  ipp:   - 1 - quasi "pp" wave functio - only S-parital wave, 0, both S and D waves
+#\  ipp = 0   
+
+#  ics:  - 1 - SLAC, 2 Kelly, 3 - Bodek, BB Arrington for-factor paremeterizations
+#\   ics = 1
+
+#         crs  - cross section in nb/GeV/str^2
+
+#----------------------------------------------------------------------
+# kinematic settings
+#----------------------------------------------------------------------
+
+# theta_r: angle between recoil and q (degrees)
+# phi_r: angle of the recoil plane and the electron scattering plane (degrees) 
+# p_miss: missing momentum (GeV/c)
+# Q2:  - 4-momemtum transfer squared (GeV/c)**2
+# E_I: incident energy (GeV)
+# ID: kinematics identification string (no blanks) 
+
+
+#! theta_r[f,0]/ phi_r[f,1]/ p_miss[f,2]/ Q2[f,3]/ E_i[f,4]/  ID[s,5]/
+99.0 0.0 0.0 4.2 10.542  k_33_22_0
+99.0 0.0 0.03 4.2 10.542  k_33_22_1
+99.0 0.0 0.06 4.2 10.542  k_33_22_2
+99.0 0.0 0.09 4.2 10.542  k_33_22_3
+99.0 0.0 0.12 4.2 10.542  k_33_22_4
+99.0 0.0 0.15 4.2 10.542  k_33_22_5
+99.0 0.0 0.18 4.2 10.542  k_33_22_6
+99.0 0.0 0.21 4.2 10.542  k_33_22_7
+99.0 0.0 0.24 4.2 10.542  k_33_22_8
+99.0 0.0 0.27 4.2 10.542  k_33_22_9
+99.0 0.0 0.3 4.2 10.542  k_33_22_10
+99.0 0.0 0.32999999999999996 4.2 10.542  k_33_22_11
+99.0 0.0 0.36 4.2 10.542  k_33_22_12
+99.0 0.0 0.39 4.2 10.542  k_33_22_13
+99.0 0.0 0.42 4.2 10.542  k_33_22_14
+99.0 0.0 0.44999999999999996 4.2 10.542  k_33_22_15
+99.0 0.0 0.48 4.2 10.542  k_33_22_16
+99.0 0.0 0.51 4.2 10.542  k_33_22_17
+99.0 0.0 0.54 4.2 10.542  k_33_22_18
+99.0 0.0 0.57 4.2 10.542  k_33_22_19
+99.0 0.0 0.6 4.2 10.542  k_33_22_20
+99.0 0.0 0.63 4.2 10.542  k_33_22_21
+99.0 0.0 0.6599999999999999 4.2 10.542  k_33_22_22
+99.0 0.0 0.69 4.2 10.542  k_33_22_23
+99.0 0.0 0.72 4.2 10.542  k_33_22_24
+99.0 0.0 0.75 4.2 10.542  k_33_22_25
+99.0 0.0 0.78 4.2 10.542  k_33_22_26
+99.0 0.0 0.8099999999999999 4.2 10.542  k_33_22_27
+99.0 0.0 0.84 4.2 10.542  k_33_22_28
+99.0 0.0 0.87 4.2 10.542  k_33_22_29
+99.0 0.0 0.8999999999999999 4.2 10.542  k_33_22_30
+99.0 0.0 0.9299999999999999 4.2 10.542  k_33_22_31
+99.0 0.0 0.96 4.2 10.542  k_33_22_32
+99.0 0.0 0.99 4.2 10.542  k_33_22_33
+99.0 0.0 1.02 4.2 10.542  k_33_22_34
+99.0 0.0 1.05 4.2 10.542  k_33_22_35
+99.0 0.0 1.08 4.2 10.542  k_33_22_36
+99.0 0.0 1.1099999999999999 4.2 10.542  k_33_22_37
+99.0 0.0 1.14 4.2 10.542  k_33_22_38
+99.0 0.0 1.17 4.2 10.542  k_33_22_39
+99.0 0.0 1.2 4.2 10.542  k_33_22_40
+99.0 0.0 1.23 4.2 10.542  k_33_22_41
+99.0 0.0 1.26 4.2 10.542  k_33_22_42
+99.0 0.0 1.29 4.2 10.542  k_33_22_43
+99.0 0.0 1.3199999999999998 4.2 10.542  k_33_22_44
+99.0 0.0 1.3499999999999999 4.2 10.542  k_33_22_45
+99.0 0.0 1.38 4.2 10.542  k_33_22_46
+99.0 0.0 1.41 4.2 10.542  k_33_22_47
+99.0 0.0 1.44 4.2 10.542  k_33_22_48
+99.0 0.0 1.47 4.2 10.542  k_33_22_49
+99.0 0.0 1.5 4.2 10.542  k_33_22_50

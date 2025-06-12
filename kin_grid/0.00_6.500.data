@@ -1,0 +1,128 @@
+
+# ----------------------------------------------------------------------
+# control parameters for edpngo4_v1 calculation
+
+# name of kinematics (no blanks)
+
+# ----------------------------------------------------------------------
+#\kinematics = ThQ_0.00_6.500
+# ----------------------------------------------------------------------
+
+# optional comments inserted into kinematics file for code (not important)
+
+# \ comment1 = 2.0 < Q2 < 8.0
+
+# \ comment2 = 0.0 < pr < 1.5
+
+# ----------------------------------------------------------------------
+# calculation control
+# ---------------------------------------------------------------------- 
+
+
+#   ktf: the knock-out nucleon is proton(1), neutron(-1)
+#\   ktf  = 1  
+
+#  noff: Off-Shell effects included (1) not included (0)
+#\   noff = 1  
+
+#  npv: only pole term in FSI (0), pole+PV (1)
+#\   npv  = 1
+
+#  npro: it calculates d\sigma/dE'_e d\Omega_e d\Omega_pf
+#\   npro = 1  
+
+#  icon: icon = 0 initialization, 1 - PWIA, 2 -forward rescattering, 3 - charge exchange rescattering
+#         12 - PWIA+FSI, 13 - PWIA+CHEX, 123 - PWIA+FSI+CHEX
+#\   icon = 12
+
+
+#  iv2:  - version of parameterization of CHEX amplitude -
+#         10 - Gibbs-Loiseau (has only real part), 21 - SAID, 1021 - SAID+GL
+#         10021 - SAID+GL (with Im part at p>p0 modelled using SAID's value
+#         -21 SAID   - For details look at fpn_chex.f          
+#\   iv2 = 10  
+
+
+#  iv1:  - version of FSI; 1- diagonal FSI using fpn.f, 2- diagonal FSI using f_NN_sd.f
+#         which uses SAID parameterization for plab<3.68, 3 - nondiagonal approximation
+#         using f_NN_sd.f. At p>1.4 it uses diffractive parametrization like fpn.f
+#\  iv1= 3    
+
+#  isd:   - isd = 1 spectator mechanism, isd=2 direct mechanism isd =0 both
+#\  isd = 1   
+
+#  iw:    - 1 - Paris 2 - V18 deuteron wave funcion, 3- cd Bonn, 4 - AV18sb
+#\  iw = 3    
+
+#  ipp:   - 1 - quasi "pp" wave functio - only S-parital wave, 0, both S and D waves
+#\  ipp = 0   
+
+#  ics:  - 1 - SLAC, 2 Kelly, 3 - Bodek, BB Arrington for-factor paremeterizations
+#\   ics = 1
+
+#         crs  - cross section in nb/GeV/str^2
+
+#----------------------------------------------------------------------
+# kinematic settings
+#----------------------------------------------------------------------
+
+# theta_r: angle between recoil and q (degrees)
+# phi_r: angle of the recoil plane and the electron scattering plane (degrees) 
+# p_miss: missing momentum (GeV/c)
+# Q2:  - 4-momemtum transfer squared (GeV/c)**2
+# E_I: incident energy (GeV)
+# ID: kinematics identification string (no blanks) 
+
+
+#! theta_r[f,0]/ phi_r[f,1]/ p_miss[f,2]/ Q2[f,3]/ E_i[f,4]/  ID[s,5]/
+0.0 0.0 0.0 6.5 10.542  k_0_45_0
+0.0 0.0 0.03 6.5 10.542  k_0_45_1
+0.0 0.0 0.06 6.5 10.542  k_0_45_2
+0.0 0.0 0.09 6.5 10.542  k_0_45_3
+0.0 0.0 0.12 6.5 10.542  k_0_45_4
+0.0 0.0 0.15 6.5 10.542  k_0_45_5
+0.0 0.0 0.18 6.5 10.542  k_0_45_6
+0.0 0.0 0.21 6.5 10.542  k_0_45_7
+0.0 0.0 0.24 6.5 10.542  k_0_45_8
+0.0 0.0 0.27 6.5 10.542  k_0_45_9
+0.0 0.0 0.3 6.5 10.542  k_0_45_10
+0.0 0.0 0.32999999999999996 6.5 10.542  k_0_45_11
+0.0 0.0 0.36 6.5 10.542  k_0_45_12
+0.0 0.0 0.39 6.5 10.542  k_0_45_13
+0.0 0.0 0.42 6.5 10.542  k_0_45_14
+0.0 0.0 0.44999999999999996 6.5 10.542  k_0_45_15
+0.0 0.0 0.48 6.5 10.542  k_0_45_16
+0.0 0.0 0.51 6.5 10.542  k_0_45_17
+0.0 0.0 0.54 6.5 10.542  k_0_45_18
+0.0 0.0 0.57 6.5 10.542  k_0_45_19
+0.0 0.0 0.6 6.5 10.542  k_0_45_20
+0.0 0.0 0.63 6.5 10.542  k_0_45_21
+0.0 0.0 0.6599999999999999 6.5 10.542  k_0_45_22
+0.0 0.0 0.69 6.5 10.542  k_0_45_23
+0.0 0.0 0.72 6.5 10.542  k_0_45_24
+0.0 0.0 0.75 6.5 10.542  k_0_45_25
+0.0 0.0 0.78 6.5 10.542  k_0_45_26
+0.0 0.0 0.8099999999999999 6.5 10.542  k_0_45_27
+0.0 0.0 0.84 6.5 10.542  k_0_45_28
+0.0 0.0 0.87 6.5 10.542  k_0_45_29
+0.0 0.0 0.8999999999999999 6.5 10.542  k_0_45_30
+0.0 0.0 0.9299999999999999 6.5 10.542  k_0_45_31
+0.0 0.0 0.96 6.5 10.542  k_0_45_32
+0.0 0.0 0.99 6.5 10.542  k_0_45_33
+0.0 0.0 1.02 6.5 10.542  k_0_45_34
+0.0 0.0 1.05 6.5 10.542  k_0_45_35
+0.0 0.0 1.08 6.5 10.542  k_0_45_36
+0.0 0.0 1.1099999999999999 6.5 10.542  k_0_45_37
+0.0 0.0 1.14 6.5 10.542  k_0_45_38
+0.0 0.0 1.17 6.5 10.542  k_0_45_39
+0.0 0.0 1.2 6.5 10.542  k_0_45_40
+0.0 0.0 1.23 6.5 10.542  k_0_45_41
+0.0 0.0 1.26 6.5 10.542  k_0_45_42
+0.0 0.0 1.29 6.5 10.542  k_0_45_43
+0.0 0.0 1.3199999999999998 6.5 10.542  k_0_45_44
+0.0 0.0 1.3499999999999999 6.5 10.542  k_0_45_45
+0.0 0.0 1.38 6.5 10.542  k_0_45_46
+0.0 0.0 1.41 6.5 10.542  k_0_45_47
+0.0 0.0 1.44 6.5 10.542  k_0_45_48
+0.0 0.0 1.47 6.5 10.542  k_0_45_49
+0.0 0.0 1.5 6.5 10.542  k_0_45_50

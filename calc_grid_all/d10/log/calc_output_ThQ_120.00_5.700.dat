@@ -1,0 +1,132 @@
+ init--> using wave function type :            3
+  
+          Subroutine Bystricky_dat: Reading data files
+  
+ init-->done
+ start PWIA calc
+ start FSI calc
+   5.69999981       0.00000000       120.000000      0.998703241       3.86655378       735.016296       718.923218      0.978105128    
+ start PWIA calc
+ start FSI calc
+   5.69999981       2.99999993E-02   120.000000      0.977728844       4.00063848       346.561707       336.506317      0.970985293    
+ start PWIA calc
+ start FSI calc
+   5.69999981       5.99999987E-02   120.000000      0.955482602       4.14901543       87.5199661       83.3386536      0.952224493    
+ start PWIA calc
+ start FSI calc
+   5.69999981       9.00000036E-02   120.000000      0.932039499       4.31274080       23.8153191       22.0886097      0.927495837    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.119999997       120.000000      0.907474220       4.49305391       7.63764238       6.90764189      0.904420674    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.150000006       120.000000      0.881867826       4.69135380       2.80128074       2.46753216      0.880858600    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.180000007       120.000000      0.855300367       4.90927601       1.13802934      0.982728779      0.863535523    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.209999993       120.000000      0.827855229       5.14869261      0.501323462      0.426916808      0.851579547    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.239999995       120.000000      0.799615860       5.41178179      0.236481130      0.197516948      0.835233450    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.270000011       120.000000      0.770663321       5.70109987      0.118594110       9.68363062E-02  0.816535532    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.300000012       120.000000      0.741078138       6.01964760       6.29290640E-02   5.09433672E-02  0.809536397    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.330000013       120.000000      0.710937202       6.37097931       3.51524763E-02   2.91418917E-02  0.829013884    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.360000014       120.000000      0.680315733       6.75931406       2.05325633E-02   1.73634253E-02  0.845653057    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.389999986       120.000000      0.649283707       7.18973255       1.24321757E-02   1.06479069E-02  0.856479764    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.419999987       120.000000      0.617908478       7.66835737       7.72337522E-03   6.63225399E-03  0.858724833    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.449999988       120.000000      0.586251676       8.20268154       4.87169344E-03   4.17874381E-03  0.857760012    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.479999989       120.000000      0.554371238       8.80191898       3.08902236E-03   2.62703188E-03  0.850441217    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.509999990       120.000000      0.522320688       9.47754097       1.94975385E-03   1.64154998E-03  0.841926813    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.540000021       120.000000      0.490147918       10.2440414       1.21294416E-03   1.01110246E-03  0.833593547    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.569999993       120.000000      0.457897246       11.1199169       7.35250127E-04   6.07741647E-04  0.826578081    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.600000024       120.000000      0.425608188       12.1292124       4.28165455E-04   3.52441071E-04  0.823142231    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.629999995       120.000000      0.393316090       13.3037128       2.33740881E-04   1.92245832E-04  0.822474122    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.660000026       120.000000      0.361052603       14.6863337       1.14411407E-04   9.47204535E-05  0.827893436    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.689999998       120.000000      0.328845143       16.3364582       4.42532873E-05   3.70939888E-05  0.838219941    
+ start PWIA calc
+ start FSI calc
+   5.69999981      0.720000029       120.000000      0.296718061       18.3386269       6.12434178E-06   5.23897734E-06  0.855435193    
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc
+ start PWIA calc
+ start FSI calc

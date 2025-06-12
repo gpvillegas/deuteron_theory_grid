@@ -1,0 +1,25 @@
+# 1  # ktf the knock-out nucleon is proton(1), neutron(-1)
+# 1  # noff Off-Shell effects included (1) not included (0)
+# 1  # npv only pole term in FSI (0), pole+PV (1) 
+# 1  # npro it calculates d\sigma/dE'_e d\Omega_e d\Omega_pf
+# 1  # icon = 0 initialization, 1 - PWIA, 2 -forward rescattering, 3 - charge exchange rescattering 
+#         12 - PWIA+FSI, 13 - PWIA+CHEX, 123 - PWIA+FSI+CHEX
+# 10   #i v2  - version of parameterization of CHEX amplitude - 
+#         10 - Gibbs-Loiseau (has only real part), 21 - SAID, 1021 - SAID+GL
+#         10021 - SAID+GL (with Im part at p>p0 modelled using SAID's value
+#         -21 SAID   - For details look at fpn_chex.f
+# 3  # iv1  - version of FSI; 1- diagonal FSI using fpn.f, 2- diagonal FSI using f_NN_sd.f 
+#         which uses SAID parameterization for plab<3.68, 3 - nondiagonal approximation 
+#         using f_NN_sd.f. At p>1.4 it uses diffractive parametrization like fpn.f
+# 1  # isd  - isd = 1 spectator mechanism, isd=2 direct mechanism isd =0 both   
+# 2  # iw   - 1 - Paris 2 - V18 deuteron wave funcion, 3- cd Bonn, 4 - AV18sb
+# 0  # ipp  - 1 - quasi "pp" wave functio - only S-parital wave, 0, both S and D waves
+# 1  # ics  - 1 - SLAC, 2 Kelly, 3 - Bodek, BB Arrington for-factor paremeterizations
+
+#    crs  - cross section in nb/GeV/str^2
+
+#\ icon = 1; iw = 2
+#! thr0[f,0]/ phr0[f,1]/ pr[f,2]/ ei[f,3]/ th_e[f,4]/ q2[f,5]/ x[f,6]/ plab[f,7]/ crs0[f,8]/ crs12[f,9]/ ratio[f,10]/ crs_ten0[f,11]/ crs_ten12[f,12]/ crs_pol0_-1[f,13]/ crs_pol0_0[f,14]/ crs_pol0_1[f,15]/ crs_pol12_-1[f,16]/ crs_pol12_0[f,17]/ crs_pol12_1[f,18]/ asym0[f,19]/ asym12[f,20]/ ID[s,21]/ w_l[f,22]/ w_t[f,23]/ w_lt[f,24]/ w_tt[f,25]/ w_l_pwia[f,26]/ w_t_pwia[f,27]/ w_lt_pwia[f,28]/ w_tt_pwia[f,29]/ 
+20.0 0.0 0.200000003 11.0 11.3419189 4.0 1.26141584 1.97086847 6.9380188 1.40129846e-45 0.0 -7.27936649 1.40129846e-45 3.29833555 14.2173853 3.29833531 1.40129846e-45 0.0 3.68077027e-37 -1.04919958 1.0 pm02_20 0.0132841561 0.157279164 0.0114115411 0.000220298767 0.0132841561 0.157279164 0.0114115411 0.000220298767 
+30.0 0.0 0.200000003 11.0 11.3649035 4.0 1.23403192 2.05357814 7.02136707 1.40129846e-45 0.0 -5.58407736 1.40129846e-45 4.22932768 12.605444 4.22932816 1.40129846e-45 0.0 3.68077027e-37 -0.795297742 1.0 pm02_30 0.0139526604 0.157531828 0.0168612003 0.000470839441 0.0139526604 0.157531828 0.0168612003 0.000470839441 
+40.0 0.0 0.200000003 11.0 11.3969765 4.0 1.19800425 2.16722441 6.99438334 1.40129846e-45 0.0 -3.38417673 1.40129846e-45 5.30229473 10.3785601 5.30229521 1.40129846e-45 0.0 3.68077027e-37 -0.483842045 1.0 pm02_40 0.0148436129 0.157841772 0.0219944492 0.00077816844 0.0148436129 0.157841772 0.0219944492 0.00077816844 
