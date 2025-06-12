@@ -1,0 +1,15 @@
+# data files and results from running scripts
+*.txt
+*.kin
+*.data
+*.log
+
+# directories which are created by scripts
+/kin_grid
+/calc_grid_all
+
+# fortran compilation files
+/edepngo4_v1/*.o
+
+# other
+.DS_Store
