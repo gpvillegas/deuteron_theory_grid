@@ -5,9 +5,10 @@
 *.log
 
 # directories which are created by scripts
-kin_grid
-calc_grid_all
-results
+kin_grid/
+calc_grid_all/
+results/
+python/__pycache__/
 
 # fortran compilation files
 edepngo4_v1/*.o
