@@ -1,8 +1,5 @@
 # data files and results from running scripts
-*.txt
-*.kin
-*.data
-*.log
+edepngo4_v1/run_setup.txt
 
 # directories which are created by scripts
 kin_grid/
@@ -15,3 +12,4 @@ edepngo4_v1/*.o
 
 # other
 .DS_Store
+edepngo4_v1/run_sigma_ed4
