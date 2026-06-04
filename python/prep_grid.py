@@ -101,7 +101,7 @@ parameters = """
 #\  isd = 1   
 
 #  iw:    - 1 - Paris 2 - V18 deuteron wave funcion, 3- cd Bonn, 4 - AV18sb
-#\  iw = 3    
+#\  iw = 2    
 
 #  ipp:   - 1 - quasi "pp" wave functio - only S-parital wave, 0, both S and D waves
 #\  ipp = 0   
@@ -146,7 +146,7 @@ q2_step = (q2_max - q2_min)/N_q2
 
 # pr range
 pr_min = 0.
-pr_max = 1.5
+pr_max = 2.0
 
 N_pr = 50
 
@@ -156,10 +156,11 @@ pr_step = (pr_max - pr_min)/N_pr
 thr_min = 0.
 thr_max = 180.
 
-N_thr = 60
+N_thr = 72
 
 thr_step = (thr_max - thr_min)/N_thr
 
+print(f'** Writing Thq_* grid files to {kin_dir}...')
 for i_thr in range(N_thr + 1):
     thr = thr_min + i_thr * thr_step 
     for i_q2 in range(N_q2 + 1):
@@ -175,3 +176,4 @@ for i_thr in range(N_thr + 1):
             o.write(f'{thr} {phr} {pr} {q2} {Ei}  k_{i_thr}_{i_q2}_{i_pr}\n')
 
 o.close()
+print('Successfully written grid files.')

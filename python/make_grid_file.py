@@ -16,17 +16,24 @@ import glob as G
 
 data_dir = './calc_grid_all/grid/'
 
-icon = 12
-iw = 3
+#  icon: icon = 0 initialization, 1 - PWIA, 2 -forward rescattering, 3 - charge exchange rescattering
+#         12 - PWIA+FSI, 13 - PWIA+CHEX, 123 - PWIA+FSI+CHEX
+icon = 12  
+#  iw:    - 1 - Paris 2 - V18 deuteron wave funcion, 3- cd Bonn, 4 - AV18sb
+iw = 2
+#  noff: Off-Shell effects included (1) not included (0)
 noff = 1
+#  npv: only pole term in FSI (0), pole+PV (1)
 npv = 1
+#  ics:  - 1 - SLAC, 2 Kelly, 3 - Bodek, BB Arrington for-factor paremeterizations
 ics = 1
 
 file_patt = f'csec_calc_ThQ*_{icon}_{iw}_{noff}_{npv}_{ics}.data' # select files with the correct calc. type
 
+print('** Getting csec_* files...')
 files = G.glob(data_dir + file_patt)
 
-
+print('** Getting data from files...')
 data = []
 for f in files:
     d = B.get_file(f)
@@ -47,6 +54,7 @@ u_v, u_i, u_c = np.unique(data_a[:,0][i_s_th], return_index = True, return_count
 
 th_slices = [slice(*zz) for zz in zip(u_i, u_i + u_c)]  # find the slices with constant theta (data_a[:,0]) values
 
+print('** Sorting data by constant angle...')
 #%% make a new list of arrays so that the th values are sorted and grouped in groups
 i_s_all = []
 for sl in th_slices:
@@ -61,8 +69,9 @@ i_s_all = np.array(i_s_all)
 
 N_q2 = 60
 N_pr = 50
-N_thr = 60
+N_thr = 72
 
+print('** Writing output file with sorted data...')
 grid_name = f'strfun_grid_{icon}_{iw}_{N_q2}_{N_pr}_{N_thr}.data'
 o = open(grid_name,'w')
 for th, q2, d in data_a[i_s_all]:
@@ -73,6 +82,6 @@ for th, q2, d in data_a[i_s_all]:
     for i,pr in enumerate(d['pr']):
         o.write(f"{pr:.12g} {d['w_l'][i]:.12g} {d['w_t'][i]:.12g} {d['w_lt'][i]:.12g} {d['w_tt'][i]:.12g}\n")
     # next data file
-
+print(f'{grid_name} written succesfully.')
     
      

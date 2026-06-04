@@ -25,6 +25,7 @@ Here you can select the specific parameters for your desired grid, like
   
 	Then choose your kinematic range in pr, q2 and thr. Important, the # of intervals will determine the max size of your grid, most likely the resulting grid will be smaller than this number due to forbidden kinmatics or other calculation failures that elimiante some points.
 
+Option 1: Run Xterms locally
 - **prep_calc_all_crosec_KG.py** : prepares new directory with scripts and linbks to run edpngo4_v1
 Here you can set up the number of processes (number of xterms) you want to split up the job into. Here are some stats for some grids I have made. Generally, PWIA runs much faster than FSI (duh)
      for a PWIA grid with ~ 150000 points (3721 files) in 50 terminals it lasted ~ 1h
@@ -39,7 +40,10 @@ There are 3 directory locations you have to set up, right now these are set up t
 
       LOC_DIR = '/grid' # get the current directory
 
-After running this script, skip to point 2.
+Option 2: Run scripts in the farm
+- **prep_calc_all_crosec_slurm.py** : sets up scripts and links to run as slurm jobs. The settings for the slurm job, like how much memory is requested, are set up here in the header function (line 47). Otherwise this script is structured the same as option 1. The directory locations have to be set up too. 
+
+After running either options 1 or 2, skip to point 2.
 
 - calc_crosecs.py : steering script to run edpngo4_v1 for a set of kinenatics in a file
 Contains the names the resulting grid will have (line 245)
@@ -54,21 +58,20 @@ Here you have to point to the grid files directory (line 17)
 
      	data_dir = './calc_grid_all/grid/'
 
-And also modify the file pattern parameters to match the grid you are making (line 25)
+And also modify the file pattern parameters to match the grid you are making (line 31)
 
     file_patt = f'csec_calc_ThQ*_{icon}_{iw}_{noff}_{npv}_{ics}.data'
 where the meaning of the pattern is in calc_crossecs.py above.
 
-Also modify the output grid name pattern to your liking, right now is (line 66):
+Also modify the output grid name pattern to your liking, right now is (line 72):
 
     grid_name = f'strfun_grid_{icon}_{iw}_{N_q2}_{N_pr}_{N_thr}.data'
     
 you can get N_q2, N_pr, N_thr from the initial prep_grid.py you ran.
 
-2. Once the prep_calc_all_crosec_KG.py has been run, cd to the calculation directory e.g. ./calc_grid_all and 
+2. Once the prep_calc_all_crosec_KG.py or prep_calc_all_crosec_slurm.py has been run, cd to the calculation directory e.g. ./calc_grid_all and 
 run the script ./run_all.sh  this will perform the entire calculation.
-After the calculation is complete then use make_grid_file.py to make the data file used
-in interpolation.                 
+After the calculation is complete then use make_grid_file.py to make the data file used in interpolation.                 
 
 _Optional:_
 

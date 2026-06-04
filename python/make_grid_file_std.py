@@ -17,7 +17,7 @@ import glob as G
 data_dir = './calc_grid_all/grid/'
 
 
-file_patt = 'csec_calc_ThQ*_1_2_1_1_1.data' # select files with the correct calc. type
+file_patt = 'csec_calc_ThQ*_1_3_1_1_1.data' # select files with the correct calc. type
 
 files = G.glob(data_dir + file_patt)
 

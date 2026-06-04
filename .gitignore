@@ -13,3 +13,4 @@ edepngo4_v1/*.o
 # other
 .DS_Store
 edepngo4_v1/run_sigma_ed4
+python/__pycache__/run_command.cpython-39.pyc

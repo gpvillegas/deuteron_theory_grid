@@ -43,16 +43,31 @@ def make_link(src,dst):
         else:
             print("make_link problem : ", msg, " for ", dst , "->", src)
             sys.exit()
-
+#----------------------------------------------------------------------
+def write_slurm_header(f,job_name,email=True):
+    f.write('#!/bin/bash\n'+\
+        '#SBATCH --partition=production\n'+\
+        '#SBATCH --account=hallc\n'+\
+        f'#SBATCH --job-name={job_name}\n'+\
+        '#SBATCH --output=/farm_out/%u/%x-%j-%N.out\n'+\
+        '#SBATCH --error=/farm_out/%u/%x-%j-%N.err\n'+\
+        '#SBATCH --ntasks=1\n'+\
+        '#SBATCH --cpus-per-task=1\n'+\
+        '#SBATCH -N1\n'+\
+        '#SBATCH --mem-per-cpu=500\n'+\
+        '#SBATCH --time=24:00:00\n')    
+    if email:
+        f.write('#SBATCH --mail-user=gvill\n'+\
+                '#SBATCH --mail-type=ALL\n')
 #----------------------------------------------------------------------
 mev2gev = 1.e-3
 dtr = np.pi/180.
 #----------------------------------------------------------------------
 
 
-# number of processes, number of xterms
+# number of processes, number of xterms/slurm jobs
 
-nproc = 10
+nproc = 300
 
 #
 BASE_DIR = '/work/hallc/c-deuteron/gvill'
@@ -105,6 +120,7 @@ script_list = []
 
 
 check_dir(result_dir)
+print('** Writing scripts in group directories...')
 # create shell scripts to run all
 # loop over groups and setup directories
 for i, fg in enumerate(file_group):
@@ -152,19 +168,24 @@ for i in {kin_dir_loc}/*.data; do ./run_one.sh $i ; done
     #
     # prepare final scripts
     #
-    script_name = f'/run_all_d{i}.sh'
+    script_name = f'/run_all_d{i}'
     o = open(root_dir + script_name,'w')
+    if i==0:
+        write_slurm_header(o,job_name=f'file_group_d{i}')
+    else:
+        write_slurm_header(o,job_name=f'file_group_d{i}',email=False)
     o.write(f'cd {dir_name}\n')
     o.write('./setup.sh\n')
     o.write('./run_all_kin.sh')
     o.close()
-    os.chmod(root_dir + script_name,0o755)
     script_list.append(script_name)
 
-#%% create script to run all as xterms
+print('** Writing final script...')
+#%% create script to run all as sbatch commands
 run_all_name = root_dir +'/run_all.sh' 
 so = open(run_all_name ,'w')
 for l in script_list:
-    so.write('xterm -hold -e ./{} &\n'.format(l))
+    so.write(f'sbatch .{l}\n')
 so.close()
 os.chmod(run_all_name,0o755)
+print('calc_grid_all scripts are ready.')
